@@ -1,0 +1,186 @@
+.create-movie {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.create-movie h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+}
+
+.create-movie form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-movie input,
+.create-movie textarea,
+.create-movie select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.create-movie input:focus,
+.create-movie textarea:focus,
+.create-movie select:focus {
+    border-color: #ff4c4c;
+    outline: none;
+}
+
+.create-movie textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.create-movie select {
+    appearance: none;
+    background-color: #f9f9f9;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23333" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.create-movie button {
+    padding: 14px 28px;
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-movie button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
+
+.create-movie button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.create-movie select::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+.create-movie p {
+    margin-top: 10px;
+    color: #ff4c4c;
+    text-align: center;
+}
+
+.submit-button {
+    padding: 14px 28px;
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; /* Adds space between button and input fields */
+}
+
+.submit-button:hover {
+    background-color: #ff1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:active {
+    background-color: #e60000;
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.textarea-input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    min-height: 100px; /* Adjust as needed for minimum height */
+    resize: vertical; /* Allow vertical resizing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.textarea-input:focus {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 8px rgba(255, 76, 76, 0.5);
+    outline: none;
+}
+
+.textarea-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.dropdown-input {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Removes the default arrow icon */
+    -webkit-appearance: none; /* Removes the default arrow icon in Safari */
+    -moz-appearance: none; /* Removes the default arrow icon in Firefox */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* Custom arrow icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-input:focus {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 8px rgba(255, 76, 76, 0.5);
+    outline: none;
+}
+
+.dropdown-input:disabled {
+    background-color: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.dropdown-input option {
+    padding: 10px;
+    font-size: 16px;
+}

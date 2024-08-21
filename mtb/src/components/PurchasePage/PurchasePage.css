@@ -1,0 +1,95 @@
+.purchase-page-container {
+    padding: 20px;
+    background-color: #3b3333;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.purchase-page-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2rem;
+}
+
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid rgba(82, 52, 52, 0.89);
+    border-radius: 4rem;
+    padding: 20px;
+    background-color: #4a3a3a;
+    width: 90%; /* Increased width */
+    max-width: 1200px; /* Increased max-width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-home-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.back-home-button i {
+    margin-right: 8px;
+}
+
+.back-home-button:hover {
+    background-color: #0056b3;
+}
+
+.back-home-button:focus {
+    outline: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .purchase-page-container {
+        padding: 10px;
+    }
+
+    .purchase-page-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .tickets-list {
+        width: 95%; /* Adjusted width for tablets */
+        padding: 15px;
+    }
+
+    .back-home-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .purchase-page-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .tickets-list {
+        width: 100%; /* Full width for mobile */
+        padding: 10px;
+    }
+
+    .back-home-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

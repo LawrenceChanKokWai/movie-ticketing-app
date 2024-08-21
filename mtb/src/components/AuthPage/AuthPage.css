@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f5f7;
+}
+
+.container {
+    position: relative;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Container Styling */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Sign In Form Styling */
+.sign-in-container {
+    left: 0;
+    z-index: 2;
+}
+
+/* Sign Up Form Styling */
+.sign-up-container {
+    left: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Slide Effect for Sign In */
+.container.right-panel-active .sign-in-container {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Slide Effect for Sign Up */
+.container.right-panel-active .sign-up-container {
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Overlay Container Styling */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+/* Slide Overlay Effect */
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+/* Overlay Background and Panel Styling */
+.overlay {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Slide Effect for Overlay */
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Overlay Panel Styling */
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Left Overlay Panel */
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+/* Slide Left Overlay */
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+/* Right Overlay Panel */
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+/* Slide Right Overlay */
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+/* Button Styling */
+button {
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: #fff;
+    font-size: 14px; /* Adjusted Font Size */
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Input Fields Styling */
+input {
+    background-color: #eee;
+    border: 1px solid #ccc; /* Add a subtle border */
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-size: 16px; /* Adjusted Font Size */
+    border-radius: 5px; /* Adding rounded corners for better aesthetics */
+}
+
+/* Header Styling */
+h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 24px; /* Adjusted Font Size */
+    line-height: 1.2; /* Adjusted line height for better readability */
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 14px; /* Adjusted Font Size */
+    margin: 20px 0;
+    color: #666; /* Use a darker grey for better contrast */
+}
+
+/* Icon-Only Navigation Styling */
+.circle-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 300; /* Ensure the navigation is above other elements */
+}
+
+.nav-button {
+    background-color: transparent; /* Remove background color */
+    border: none; /* Remove border */
+    color: #333; /* Dark color for icons */
+    font-size: 28px; /* Larger icon size */
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #ff416c; /* Change color on hover */
+    transform: scale(1.2); /* Slightly larger on hover */
+}
+
+.nav-button:focus {
+    outline: none;
+    color: #ff4b2b; /* Color change on focus */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium screens (tablets, 768px and up) */
+@media (max-width: 1024px) {
+    .form-container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+}
+
+/* Small screens (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .overlay-container {
+        display: none; /* Hide the overlay for small screens */
+    }
+
+    .sign-up-container,
+    .sign-in-container {
+        width: 100%;
+        opacity: 1;
+        z-index: 1;
+        transform: translateX(0);
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Toggle Button for Small Screens */
+    .toggle-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #ff4b2b;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        z-index: 200;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-button:hover {
+        background-color: #ff416c;
+    }
+}
+
+/* Extra small screens (phones, less than 576px) */
+@media (max-width: 576px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    /* Adjust Icon-Only Navigation for Small Screens */
+    .nav-button {
+        font-size: 24px; /* Slightly smaller icon size for small screens */
+    }
+}

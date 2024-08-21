@@ -1,0 +1,155 @@
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    text-align: left;
+    table-layout: auto; /* Allows the table to automatically adjust column widths */
+}
+
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+td {
+    background-color: #ffffff;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+a {
+    color: #ff4c4c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+tbody tr:hover {
+    background-color: #f4f4f4;
+}
+
+/* Button styling */
+button {
+    padding: 4px 8px; /* Smaller padding for a compact button */
+    margin-right: 5px;
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 12px; /* Reduced font size */
+}
+
+button:hover {
+    background-color: #ff1a1a;
+}
+
+td.actions {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 5px; /* Space between buttons */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    button {
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        display: none; /* Hide table headers */
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        border: none;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    td img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    td.actions {
+        justify-content: flex-start; /* Align buttons to the left */
+    }
+}
+
+@media (max-width: 576px) {
+    th, td {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    button {
+        padding: 3px 5px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    th, td {
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+
+    button {
+        padding: 2px 4px;
+        font-size: 7px;
+    }
+}

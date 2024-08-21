@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+header {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav a {
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a.active {
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+a:hover {
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+/* Carousel */
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    margin-top: -50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item {
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3) {
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4) {
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5) {
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6) {
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7) {
+    left: calc(67% + 800px);
+    opacity: 0;
+}
+
+/* Content inside each carousel item */
+.list .item .content {
+    position: absolute;
+    top: 30%; /* Adjusted to move the content higher */
+    left: 100px;
+    transform: translateY(-50%);
+    width: 600px;
+    text-align: left;
+    color: #fff;
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(40, 28, 28, 0.9);
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.list .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .title {
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #14ff72cb;
+    font-weight: bold;
+    line-height: 1;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name {
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+.content .btn {
+    margin-left: 5px;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1) {
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2) {
+    background: transparent;
+    color: #14ff72cb;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover {
+    background-color: #14ff72cb;
+    color: #fff;
+    border-color: #14ff72cb;
+}
+
+.content .btn button.category {
+    cursor: default;
+    pointer-events: none;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #14ff72cb;
+}
+
+/* Red stopped light */
+.red-light {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Red blinking light */
+.blinking-light {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: blinking 1s infinite;
+}
+
+/* White blinking light for available */
+.white-blinking-light {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: blinking 1s infinite;
+}
+
+/* Keyframes for blinking and content animation */
+@keyframes blinking {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* Next and previous arrows */
+.arrows {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #14ff72cb;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Time running bar */
+.carousel .timeRunning {
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: #14ff72cb;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 999px) {
+    header {
+        padding-left: 50px;
+    }
+
+    .list .item .content {
+        top: 30%; /* Keep the content higher for smaller screens as well */
+        left: 50px;
+        width: 300px;
+        padding: 15px;
+    }
+
+    .content .title, .content .name {
+        font-size: 70px;
+    }
+
+    .content .des {
+        font-size: 16px;
+    }
+
+    .arrows {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .arrows button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    header nav a {
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content {
+        top: 35%; /* Slightly lower top value for very small screens */
+        left: 20px;
+        width: 250px;
+        padding: 10px;
+    }
+
+    .content .title, .content .name {
+        font-size: 45px;
+    }
+
+    .content .des {
+        font-size: 14px;
+    }
+
+    .content .btn button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .arrows {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .arrows button {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        padding-left: 20px;
+    }
+
+    .list .item .content {
+        top: 40%; /* Further adjustment for very small screens */
+        left: 10px;
+        width: 200px;
+        padding: 8px;
+    }
+
+    .content .title, .content .name {
+        font-size: 35px;
+    }
+
+    .content .des {
+        font-size: 12px;
+    }
+
+    .content .btn button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .arrows {
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .arrows button {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    header nav a {
+        font-size: 12px;
+    }
+
+    .list .item .content {
+        top: 45%; /* Adjust for ultra-small screens */
+        left: 5px;
+        width: 180px;
+        padding: 5px;
+    }
+
+    .content .title, .content .name {
+        font-size: 30px;
+    }
+
+    .content .des {
+        font-size: 10px;
+    }
+
+    .content .btn button {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .arrows {
+        bottom: 3px;
+        right: 3px;
+    }
+
+    .arrows button {
+        width: 20px;
+        height: 20px;
+    }
+}

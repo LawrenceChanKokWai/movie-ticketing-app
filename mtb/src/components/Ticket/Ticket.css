@@ -1,0 +1,203 @@
+.ticket-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.barcode-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    border-right: 2px solid #3a3a3a;
+    border-radius: 16px 0 0 16px;
+}
+
+.ticket-info p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #c1c1c1;
+}
+
+.barcode {
+    text-align: center;
+    margin: 15px 0;
+    width: 100%; /* Make the barcode take the full width of the section */
+}
+
+.barcode svg {
+    max-width: 100%; /* Ensure the barcode SVG scales within its container */
+    height: auto;
+}
+
+.barcode p {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #c1c1c1;
+}
+
+.cinema-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.movie-section {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #2d2d2d;
+    border-radius: 0 16px 16px 0;
+}
+
+.movie-details {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-title h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.movie-info p,
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info p {
+    font-size: 12px;
+    color: #c1c1c1;
+}
+
+.movie-info h3 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.movie-image {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 16px 16px 0;
+    transition: transform 0.3s ease;
+}
+
+.movie-image img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .ticket-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .barcode-section {
+        padding: 15px;
+        border-right: none;
+        border-bottom: 2px solid #3a3a3a;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .movie-section {
+        flex-direction: column;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .movie-title h1 {
+        font-size: 22px;
+    }
+
+    .movie-info h3 {
+        font-size: 16px;
+    }
+
+    .movie-info p {
+        font-size: 10px;
+    }
+
+    .barcode p {
+        font-size: 10px;
+    }
+
+    .cinema-name {
+        font-size: 12px;
+    }
+
+    .barcode svg {
+        width: 80%; /* Adjust the barcode width for smaller screens */
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .barcode-section {
+        padding: 10px;
+    }
+
+    .movie-title h1 {
+        font-size: 20px;
+    }
+
+    .movie-info h3 {
+        font-size: 14px;
+    }
+
+    .movie-info p {
+        font-size: 8px;
+    }
+
+    .barcode p {
+        font-size: 8px;
+    }
+
+    .cinema-name {
+        font-size: 10px;
+    }
+
+    .movie-image img {
+        border-radius: 0;
+    }
+
+    .barcode svg {
+        width: 70%; /* Further adjust barcode size for very small screens */
+        max-width: 100%;
+    }
+}

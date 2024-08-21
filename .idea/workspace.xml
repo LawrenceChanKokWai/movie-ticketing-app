@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5fe16f1-c36e-4577-b684-cedf414d7f2b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2kc4oBDPYzdIOOpdIT3ozL2UIqZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chankokwai/Desktop/Movie_Ticketing_App/mtb/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;818d8580ec0d4bd96335f8e94122b4a8&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mtb/src/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mtb/src/components" />
+      <recent name="$PROJECT_DIR$/movieticketingapplicationfe/src/assets" />
+      <recent name="$PROJECT_DIR$/movieticketingapplicationfe/src/pages" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.kokwai.movieticketingapplicationbe.repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Main">
+    <configuration name="MainTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kokwai.movieticketingapplicationbe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kokwai.movieticketingapplicationbe" />
+      <option name="MAIN_CLASS_NAME" value="com.kokwai.movieticketingapplicationbe.MainTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kokwai.movieticketingapplicationbe.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kokwai.movieticketingapplicationbe.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.kokwai.movieticketingapplicationbe.repository.RoleRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleRepositoryTest.save_all_roles_list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kokwai.movieticketingapplicationbe.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kokwai.movieticketingapplicationbe.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.kokwai.movieticketingapplicationbe.repository.RoleRepositoryTest" />
+      <option name="METHOD_NAME" value="save_all_roles_list" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.save_all_users_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kokwai.movieticketingapplicationbe.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kokwai.movieticketingapplicationbe.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.kokwai.movieticketingapplicationbe.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="save_all_users_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.update_user_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kokwai.movieticketingapplicationbe.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kokwai.movieticketingapplicationbe.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.kokwai.movieticketingapplicationbe.repository.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="update_user_test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MovieTicketingApplicationBE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kokwai.movieticketingapplicationbe.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainTests" />
+        <item itemvalue="JUnit.UserRepositoryTest.save_all_users_test" />
+        <item itemvalue="JUnit.RoleRepositoryTest" />
+        <item itemvalue="JUnit.RoleRepositoryTest.save_all_roles_list" />
+        <item itemvalue="JUnit.UserRepositoryTest.update_user_test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5fe16f1-c36e-4577-b684-cedf414d7f2b" name="Changes" comment="" />
+      <created>1723569704041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723569704041</updated>
+      <workItem from="1723569705098" duration="2578000" />
+      <workItem from="1723599012260" duration="3212000" />
+      <workItem from="1723602991620" duration="7224000" />
+      <workItem from="1723611330589" duration="43756000" />
+      <workItem from="1723685589273" duration="3635000" />
+      <workItem from="1723701681832" duration="3614000" />
+      <workItem from="1723720508858" duration="37275000" />
+      <workItem from="1723799124147" duration="1488000" />
+      <workItem from="1723817954540" duration="19279000" />
+      <workItem from="1723860949099" duration="10070000" />
+      <workItem from="1723874898601" duration="84648000" />
+      <workItem from="1724029533480" duration="9877000" />
+      <workItem from="1724041849377" duration="32848000" />
+      <workItem from="1724117160153" duration="18652000" />
+      <workItem from="1724210659377" duration="1930000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

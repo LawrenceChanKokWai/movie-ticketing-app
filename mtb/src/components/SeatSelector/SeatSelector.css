@@ -1,0 +1,183 @@
+.seat-selector {
+    background-color: #333333;
+    color: white;
+    padding: 10px; /* Reduced padding */
+    border-radius: 10px;
+    flex-grow: 1;
+    max-height: 600px;
+}
+
+.screen-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.screen {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    text-transform: uppercase; /* Transform text to uppercase */
+}
+
+.screen::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff0000, transparent);
+    transform: translateY(-50%) scaleX(0.8);
+    border-radius: 50% 50% 0 0;
+}
+
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* Add extra space between specific columns */
+.seat-row .seat:nth-child(3) {
+    margin-left: 30px; /* Increase space after column 2 */
+}
+
+.seat-row .seat:nth-child(9) {
+    margin-left: 30px; /* Increase space after column 8 */
+}
+
+/* Add extra space between specific rows */
+.seat-row:nth-child(9) {
+    margin-top: 30px; /* Increase space between row 8 and row 9 */
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid white; /* Ensure seats are visible */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add a smooth transition for color and border changes */
+}
+
+.seat.available {
+    background-color: transparent; /* Transparent background for available seats */
+    color: white; /* White text for available seats */
+    cursor: pointer; /* Ensure pointer cursor for available seats */
+}
+
+.seat.booked {
+    background-color: red; /* Red background for booked seats */
+    color: white; /* White text for booked seats */
+    cursor: not-allowed; /* Indicate that booked seats cannot be clicked */
+}
+
+.seat.selected {
+    background-color: white; /* White background for selected seats */
+    color: black; /* Black text for selected seats */
+    border: 1px solid black; /* Black border for selected seats for better visibility */
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white; /* Ensure legend items are visible */
+    color: white; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for legend items as well */
+}
+
+.available.legend-item {
+    background-color: transparent;
+    border: 1px solid white; /* Same border as available seats */
+    color: white; /* White text to indicate it is available */
+}
+
+.booked.legend-item {
+    background-color: red;
+    color: white;
+}
+
+.selected.legend-item {
+    background-color: white;
+    color: black;
+    border: 1px solid black; /* Match selected seat style */
+}
+
+/* Additional styles for better visualization */
+.seat:hover {
+    border-color: yellow; /* Highlight seat border on hover */
+}
+
+/* Media Queries */
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    .seat {
+        width: 35px;
+        height: 35px;
+        margin: 4px;
+    }
+
+    .screen {
+        font-size: 1.2em;
+        height: 40px;
+    }
+
+    .legend-item {
+        padding: 8px;
+        margin-right: 15px;
+    }
+
+    .seat-selector {
+        padding: 8px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 480px) {
+    .seat {
+        width: 30px;
+        height: 30px;
+        margin: 3px;
+    }
+
+    .screen {
+        font-size: 1em;
+        height: 35px;
+    }
+
+    .legend-item {
+        padding: 6px;
+        margin-right: 10px;
+    }
+
+    .seat-selector {
+        padding: 5px;
+    }
+}

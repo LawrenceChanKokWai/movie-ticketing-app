@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ${PROJECT_NAME:movieticketingapp}
+  datasource:
+    url: jdbc:mysql://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306}/${DATABASE_NAME:movieticketingapp}?createDatabaseIfNotExist=true
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:root}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  security:
+#    user:
+#      name: lawrence
+#      password: Awrencee_@2107
+#      roles: ADMIN
+
+logging:
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) = %msg%n}
+

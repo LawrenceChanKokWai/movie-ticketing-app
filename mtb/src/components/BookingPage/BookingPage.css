@@ -1,0 +1,38 @@
+
+.booking-page {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.left-column {
+    width: 30%; /* Adjust width as necessary */
+    padding: 20px;
+    background-color: #222222;
+    box-sizing: border-box;
+}
+
+.right-column {
+    width: 70%; /* Adjust width as necessary */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #111111;
+}
+
+.right-column > * {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .booking-page {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+.input-group {
+  position: relative;
+  width: 100%; /* Default width takes full width of its container */
+  max-width: 100%; /* Allow full width scaling */
+}
+
+.input {
+  padding: 1rem; /* Use relative padding */
+  width: 100%; /* Full width of the container */
+  max-width: 100%; /* Max width is 100% of its parent container */
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #04AA6D;
+  font-size: inherit; /* Inherit font size from parent or inline style */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for dynamic adjustments */
+}
+
+.placeholder {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: inherit; /* Inherit font size from parent or inline style */
+  color: #666;
+  transition: 0.3s;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.input:focus + .placeholder,
+.input.has-value + .placeholder {
+  top: -0.07rem;
+  left: 0.78rem;
+  font-size: 0.85em; /* Scale font size relative to parent */
+  color: #04AA6D;
+  background-color: rgba(255, 255, 255, 0.81);
+  padding: 0 5px;
+}
